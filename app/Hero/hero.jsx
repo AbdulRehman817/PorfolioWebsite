@@ -7,8 +7,15 @@ import { FaLaptop } from "react-icons/fa";
 import { FaLocationArrow } from "react-icons/fa";
 import { FaLink } from "react-icons/fa";
 import { useEffect, useState, useRef } from "react";
-
 import Progressloader from "./Components/Progressloader";
+import laptopBlog from "../../public/laptopBlog.png";
+import mememakerBlog from "../../public/mememakerBlog.png";
+import weatherApp from "../../public/weatherapp.png";
+import { FaGithubSquare } from "react-icons/fa";
+import { FaCode } from "react-icons/fa6";
+import Contact from "./Components/contact";
+import Footer from "./Components/Footer";
+
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false); // State for animation visibility
 
@@ -78,9 +85,9 @@ const Hero = () => {
                   padding: "25px 35px",
                   margin: "35px 0",
                 }}
-                className="mb-5 text-5xl font-bold"
+                className="mb-5 text-4xl font-bold"
               >
-                Lavish
+                Abdul Rehman
               </h1>
               //
               <Animation />
@@ -146,11 +153,13 @@ const Hero = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-[20px] mb-10 text-white">
-                  Responsive Mobile
+                  Full-Stack Development
                 </h3>
                 <p className="text-[#999] text-[16px] font-semibold -mt-[30px] w-[260px]">
-                  Lavish CSS Template is designed by templatemo. Download, edit
-                  and use this layout.
+                  I design and develop both the front-end and back-end of web
+                  applications. From user-friendly interfaces and writing
+                  server-side code, I handle all aspects of web development like
+                  React, Next.js,
                 </p>
               </div>
 
@@ -160,11 +169,14 @@ const Hero = () => {
 
               <div>
                 <h3 className="font-semibold text-[20px] mb-10 text-white ">
-                  UI & UX Design
+                  Mobile Application Development
                 </h3>
                 <p className="text-[#999] text-[16px] font-semibold -mt-[30px] w-[310px]">
-                  UI & UX Design Credits go to Pixabay and Unsplash for images
-                  used in this free CSS website template
+                  I specialize in creating high-performance, cross-platform
+                  mobile applications using React Native. This allows me to
+                  develop apps that work seamlessly on both iOS and Android
+                  platforms, reducing development time and ensuring a consistent
+                  user experience across devices.
                 </p>
               </div>
 
@@ -173,11 +185,13 @@ const Hero = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-[20px] mb-10 text-white">
-                  CSS Templates
+                  Problem Solving & Algorithm Design
                 </h3>
                 <p className="text-[#999] text-[16px] font-semibold -mt-[30px] w-[260px]">
-                  We provide a wide range of HTML5 templates for free. Please
-                  spread a word about us on social media.
+                  I enjoy tackling complex problems and writing optimized
+                  algorithms to improve performance and deliver faster, more
+                  reliable solutions.As a software engineer, I thrive on
+                  tackling complex challenges
                 </p>
               </div>
             </div>
@@ -192,7 +206,7 @@ const Hero = () => {
             isVisible ? "animated fadeInLeft" : ""
           }`}
         >
-          ABOUT LAVISH
+          ABOUT ME
         </h2>
         <div className=" flex gap-[40px]">
           <div
@@ -202,11 +216,18 @@ const Hero = () => {
               DESIGNER & DEVELOPER
             </h3>
             <p className="text-[#999] w-[550px]">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam
-              erat volutpat. Dolore magna aliquam erat volutpat. Lorem ipsum
-              dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-              nibh euismod tincidunt ut laoreet.
+              Hello! I’m Abdul Rehman, a passionate software engineer dedicated
+              to crafting innovative and efficient software solutions. With a
+              strong foundation in computer science, I have developed a keen
+              interest in full-stack development, focusing on creating
+              user-friendly applications that meet real-world needs. I am
+              proficient in JavaScript, React, and Node.js, and I thrive in
+              fast-paced environments where I can collaborate with
+              cross-functional teams.When I’m not coding, I enjoy exploring new
+              technologies, participating in hackathons, and contributing to
+              open-source projects. I believe that continuous learning is key to
+              success in the tech industry, and I actively seek opportunities to
+              expand my knowledge and skill set.
             </p>
           </div>
           <div className="-mt-[20px]">
@@ -240,6 +261,153 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      <div className="container">
+        <h1 className="title">
+          My Recent <span className="highlight">Works</span>
+        </h1>
+        <p className="subtitle">
+          Here are a few projects I've worked on recently.
+        </p>
+        <div className="projectsContainer animated fadeIn">
+          {/* Card 1 */}
+          <div className={`projectCard ${isVisible ? "animated fadeIn" : ""}`}>
+            <div className="precard ">
+              <Image
+                src={laptopBlog}
+                alt="Blogging App"
+                width={600}
+                height={300}
+                className="projectImage"
+              />
+              <h2 className="text-center">Blogging App</h2>
+              <p>
+                This Blogging App, developed with React, provides users with a
+                platform to create, edit, and publish blog posts seamlessly. The
+                app features a modern, responsive design that allows users to
+                view and manage blogs on any device. It includes a rich-text
+                editor, enabling writers to format their content with headings,
+                lists, images, and more. Users can organize their blogs with
+                categories or tags, making navigation and content discovery
+                easier. The app also supports real-time previews, allowing
+                authors to see how their blog posts will look before publishing.
+                This app offers a comprehensive yet user-friendly blogging
+                experience.
+              </p>
+              <div className="buttons">
+                <a
+                  href="https://github.com/AbdulRehman817/Blogging-Website-using-react-and-firebase"
+                  className="button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaGithubSquare />
+                  GitHub
+                </a>
+                <a
+                  href="https://dapper-heliotrope-5ece0d.netlify.app/"
+                  className="button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaCode />
+                  Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 2 */}
+          <div className="projectCard">
+            <div className="precard">
+              <Image
+                src={mememakerBlog}
+                alt="Fumicon Pesticides Control"
+                width={600}
+                height={300}
+                className="projectImage"
+              />
+              <h2 className="text-center">Meme Maker</h2>
+              <p>
+                This Meme Maker app, built using Next js and TypeScript, allows
+                users to create and customize their own memes with ease. The app
+                features a simple and intuitive interface where users can upload
+                images, add custom text, and position it anywhere on the image.
+                It includes options to change the font style, size, and color to
+                ensure creative flexibility. With real-time editing, users can
+                see their meme come to life as they make changes. The app is
+                responsive, ensuring a smooth experience across devices. Once
+                completed, users can download their memes and share them on
+                social media.
+              </p>
+              <div className="buttons">
+                <a
+                  href="https://github.com/AbdulRehman817/Meme-Maker"
+                  className="button"
+                >
+                  <FaGithubSquare /> GitHub
+                </a>
+                <a
+                  href="https://meme-maker-126d.vercel.app/"
+                  className="button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaCode />
+                  Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 3 */}
+          <div className="projectCard">
+            <div className="precard">
+              <Image
+                src={weatherApp}
+                alt="Weather App"
+                width={600}
+                height={300}
+                className="projectImage"
+              />
+              <h2 className="text-center">Weather App</h2>
+              <p>
+                This weather app, built using JavaScript, provides real-time
+                weather updates for any location. Users can search by city name
+                to get the current temperature, weather conditions (like clear
+                skies, rain, or cloudy), humidity, and wind speed. The app uses
+                an API to fetch accurate weather data from a reliable source and
+                displays it in a clean, user-friendly interface. The design is
+                simple yet effective, focusing on delivering essential weather
+                information at a glance. With responsive features, the app works
+                seamlessly across devices, ensuring users can check the weather
+                on the go.
+              </p>
+              <div className="buttons">
+                <a
+                  href="https://github.com/AbdulRehman817/Weather-App"
+                  className="button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaGithubSquare /> GitHub
+                </a>
+                <a
+                  href="https://weather-app-gules-alpha-61.vercel.app/"
+                  className="button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaCode /> Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Contact />
+      <Footer />
     </>
   );
 };
