@@ -271,8 +271,8 @@ const Hero = () => {
         </p>
         <div className="projectsContainer animated fadeIn">
           {/* Card 1 */}
-          <div className={`projectCard ${isVisible ? "animated fadeIn" : ""}`}>
-            <div className="precard ">
+          <div className="projectCard">
+            <div className={`precard ${isVisible ? "animated fadeInUp" : ""}`}>
               <Image
                 src={laptopBlog}
                 alt="Blogging App"
@@ -319,7 +319,7 @@ const Hero = () => {
 
           {/* Card 2 */}
           <div className="projectCard">
-            <div className="precard">
+            <div className={`precard ${isVisible ? "animated fadeInUp" : ""}`}>
               <Image
                 src={mememakerBlog}
                 alt="Fumicon Pesticides Control"
@@ -362,7 +362,7 @@ const Hero = () => {
 
           {/* Card 3 */}
           <div className="projectCard">
-            <div className="precard">
+            <div className={`precard ${isVisible ? "animated fadeInUp" : ""}`}>
               <Image
                 src={weatherApp}
                 alt="Weather App"

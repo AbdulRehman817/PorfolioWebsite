@@ -108,23 +108,16 @@ const Footer = () => {
       </p>
       <div style={styles.iconContainer}>
         <a
-          href="https://github.com"
+          href="https://github.com/AbdulRehman817"
           target="_blank"
           rel="noopener noreferrer"
           style={styles.iconLink}
         >
           <FaGithub size={40} />
         </a>
+
         <a
-          href="https://twitter.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={styles.iconLink}
-        >
-          <FaTwitter size={40} />
-        </a>
-        <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/abdul-rehman-7aa108328/"
           target="_blank"
           rel="noopener noreferrer"
           style={styles.iconLink}
@@ -132,14 +125,14 @@ const Footer = () => {
           <FaLinkedin size={40} />
         </a>
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/?next=%2F&hl=en"
           target="_blank"
           rel="noopener noreferrer"
           style={styles.iconLink}
         >
           <FaInstagram size={40} />
         </a>
-        <a href="mailto:your-email@example.com" style={styles.iconLink}>
+        <a href="mailto:abdulrehmanbey1718@gmail.com" style={styles.iconLink}>
           <FaEnvelope size={40} />
         </a>
       </div>

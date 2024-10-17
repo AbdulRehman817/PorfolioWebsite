@@ -1,13 +1,22 @@
 "use client";
 
 import React from "react";
+import { useRef } from "react";
 import { useState } from "react";
+import { collection, db, addDoc } from "../../../Firebase/firebase.js";
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
+  const userName = useRef();
+  console.log(userName);
+  const userEmail = useRef();
+  console.log(userEmail);
+
+  const userMessage = useRef();
+  console.log(userMessage);
 
   const [submitted, setSubmitted] = useState(false);
 
@@ -27,6 +36,15 @@ const Contact = () => {
     // Simulate a successful submission (you can send this data to a service instead)
     setSubmitted(true);
   };
+  const addData = async () => {
+    const docRef = await addDoc(collection(db, "userData"), {
+      Email: userEmail.current.value,
+      Name: userName.current.value,
+      Message: userMessage.current.value,
+    });
+    console.log("Document written with ID: ", docRef.id);
+  };
+
   return (
     <>
       <div
@@ -42,9 +60,12 @@ const Contact = () => {
         {submitted ? (
           <div
             style={{
+              color: "white",
+
               padding: "2rem",
               borderRadius: "10px",
-              background: "transparent",
+              background: "#D43F52",
+              fontSize: "25px",
             }}
           >
             <h3>Thank you for your message!</h3>
@@ -59,8 +80,13 @@ const Contact = () => {
               borderRadius: "10px",
             }}
           >
+            <h2 className="text-white mb-[1.5rem] text-center text-3xl font-bold">
+              Contact Me
+            </h2>
+            {/* Added heading */}
             <div>
               <input
+                ref={userName}
                 type="text"
                 name="name"
                 placeholder="Your Name"
@@ -78,6 +104,7 @@ const Contact = () => {
             </div>
             <div>
               <input
+                ref={userEmail}
                 type="email"
                 name="email"
                 placeholder="Your Email"
@@ -95,6 +122,7 @@ const Contact = () => {
             </div>
             <div>
               <textarea
+                ref={userMessage}
                 name="message"
                 placeholder="Your Message"
                 value={formData.message}
@@ -110,6 +138,7 @@ const Contact = () => {
               ></textarea>
             </div>
             <button
+              onClick={addData}
               type="submit"
               style={{
                 width: "100%",
